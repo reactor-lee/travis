@@ -1,0 +1,22 @@
+language: java
+jdk:
+   - openjdk8
+
+sudo: false # faster builds
+
+script: mvn clean verify
+
+branches:
+  only:
+    - master
+
+# Travis CI Server Home
+cache:
+  directories:
+    - '$HOME/.m2
+
+notifications:
+  email:
+    recipients:
+      dongkyu.lee@thingsflow.kr
+      support@thingsflow.kr
